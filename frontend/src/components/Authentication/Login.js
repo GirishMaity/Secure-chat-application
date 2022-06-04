@@ -97,7 +97,7 @@ const Login = () => {
       </FormControl>
 
       <Button
-        colorScheme="blue"
+        colorScheme="teal"
         width="100%"
         style={{ marginTop: 15 }}
         onClick={submitHandler}
@@ -107,7 +107,7 @@ const Login = () => {
       </Button>
       <Button
         variant="solid"
-        colorScheme="red"
+        colorScheme="green"
         width="100%"
         onClick={() => {
           setEmail("test@email.com");
