@@ -1,18 +1,23 @@
 import { AddIcon } from "@chakra-ui/icons";
-import { Box, Button, Stack, Text, useToast } from "@chakra-ui/react";
-import axios, { Axios } from "axios";
-import React, { useEffect, useState } from "react";
+import { Box, Stack, Text } from "@chakra-ui/layout";
+import { useToast } from "@chakra-ui/toast";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { getSender } from "../../config/ChatLogics";
-import { ChatState } from "../../Context/ChatProvider";
 import ChatLoading from "./ChatLoading";
+import GroupChatModal from "./miscellaneous/GroupChatModal";
+import { Button } from "@chakra-ui/react";
+import { ChatState } from "../../Context/ChatProvider";
 
-const MyChats = () => {
+const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
+
   const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
 
   const toast = useToast();
 
   const fetchChats = async () => {
+    // console.log(user._id);
     try {
       const config = {
         headers: {
@@ -21,12 +26,11 @@ const MyChats = () => {
       };
 
       const { data } = await axios.get("/api/chat", config);
-      console.log(data);
       setChats(data);
     } catch (error) {
       toast({
-        title: "Error occured",
-        description: "Failed to load the chats",
+        title: "Error Occured!",
+        description: "Failed to Load the chats",
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -38,7 +42,8 @@ const MyChats = () => {
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();
-  }, []);
+    // eslint-disable-next-line
+  }, [fetchAgain]);
 
   return (
     <Box
@@ -62,15 +67,16 @@ const MyChats = () => {
         alignItems="center"
       >
         My Chats
-        <Button
-          d="flex"
-          fontSize={{ base: "17px", md: "10px", lg: "17px" }}
-          rightIcon={<AddIcon />}
-        >
-          New Group Chat
-        </Button>
+        <GroupChatModal>
+          <Button
+            d="flex"
+            fontSize={{ base: "17px", md: "10px", lg: "17px" }}
+            rightIcon={<AddIcon />}
+          >
+            New Group Chat
+          </Button>
+        </GroupChatModal>
       </Box>
-
       <Box
         d="flex"
         flexDir="column"
@@ -99,6 +105,14 @@ const MyChats = () => {
                     ? getSender(loggedUser, chat.users)
                     : chat.chatName}
                 </Text>
+                {chat.latestMessage && (
+                  <Text fontSize="xs">
+                    <b>{chat.latestMessage.sender.name} : </b>
+                    {chat.latestMessage.content.length > 50
+                      ? chat.latestMessage.content.substring(0, 51) + "..."
+                      : chat.latestMessage.content}
+                  </Text>
+                )}
               </Box>
             ))}
           </Stack>
