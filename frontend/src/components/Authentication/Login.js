@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
+//import { RiLoginCircleFill } from 'react-icons/ri'
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -69,7 +70,7 @@ const Login = () => {
   };
 
   return (
-    <VStack spacing="5px" color="black">
+    <VStack spacing="5px" color="white">
       <FormControl id="email" isRequired>
         <FormLabel>Email</FormLabel>
         <Input
@@ -89,7 +90,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
+            <Button h="1.75rem" size="sm" color="black" onClick={handleClick}>
               {show ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
@@ -97,6 +98,7 @@ const Login = () => {
       </FormControl>
 
       <Button
+       // leftIcon={<RiLoginCircleFill/>}
         colorScheme="teal"
         width="100%"
         style={{ marginTop: 15 }}
@@ -104,7 +106,7 @@ const Login = () => {
         isLoading={loading}
       >
         Login
-      </Button>
+      </Button> 
       <Button
         variant="solid"
         colorScheme="green"

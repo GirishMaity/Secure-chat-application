@@ -1,6 +1,7 @@
 import {
   Box,
   Container,
+  Icon,
   Tab,
   TabList,
   TabPanel,
@@ -28,17 +29,21 @@ function Homepage() {
         d="flex"
         justifyContent="center"
         p={3}
-        bg="white"
+        bg=""
         w="100%"
         m="40px 0 15px 0"
         borderRadius="lg"
-        borderWidth="1px"
+        //borderWidth="1px"
       >
-        <Text fontSize="4xl" fontWeight={"bold"} fontFamily="Work sans">
+        <Text fontSize="4xl" fontWeight={"bold"} fontFamily="Work sans" color="white"  >
+    
+        <img src="logo.png" alt="logo" width="60%" ></img>
+        
+        
           Chat-App
         </Text>
       </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+      <Box bg="black" w="100%" p={4} borderRadius="lg" borderWidth="">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
             <Tab>Login</Tab>
