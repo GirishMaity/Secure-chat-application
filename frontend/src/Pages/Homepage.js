@@ -1,7 +1,6 @@
 import {
   Box,
   Container,
-  Icon,
   Tab,
   TabList,
   TabPanel,
@@ -35,11 +34,13 @@ function Homepage() {
         borderRadius="lg"
         //borderWidth="1px"
       >
-        <Text fontSize="4xl" fontWeight={"bold"} fontFamily="Work sans" color="white"  >
-    
-        <img src="logo.png" alt="logo" width="60%" ></img>
-        
-        
+        <Text
+          fontSize="4xl"
+          fontWeight={"bold"}
+          fontFamily="Work sans"
+          color="white"
+        >
+          <img src="logo.png" alt="logo" width="60%"></img>
           Chat-App
         </Text>
       </Box>

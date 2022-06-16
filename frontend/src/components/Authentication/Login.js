@@ -2,13 +2,14 @@ import { Button } from "@chakra-ui/button";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { VStack } from "@chakra-ui/layout";
-import { Show } from "@chakra-ui/media-query";
-import { toast } from "@chakra-ui/toast";
+//import { Show } from "@chakra-ui/media-query";
+//import { toast } from "@chakra-ui/toast";
 import React, { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 //import { RiLoginCircleFill } from 'react-icons/ri'
+import { createBrowserHistory } from "history";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -16,7 +17,9 @@ const Login = () => {
   const [password, setPassword] = useState();
   const [loading, setLoading] = useState(false);
   const toast = useToast();
-  const history = useHistory();
+  const history = createBrowserHistory({
+    forceRefresh: true,
+  });
 
   const handleClick = () => setShow(!show);
   const submitHandler = async () => {
@@ -98,7 +101,7 @@ const Login = () => {
       </FormControl>
 
       <Button
-       // leftIcon={<RiLoginCircleFill/>}
+        // leftIcon={<RiLoginCircleFill/>}
         colorScheme="teal"
         width="100%"
         style={{ marginTop: 15 }}
@@ -106,7 +109,7 @@ const Login = () => {
         isLoading={loading}
       >
         Login
-      </Button> 
+      </Button>
       <Button
         variant="solid"
         colorScheme="green"
