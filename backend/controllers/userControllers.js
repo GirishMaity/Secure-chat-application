@@ -1,6 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const generateToken = require("../config/generateToken");
-const User = require("../models/userModel");
+const User = require("../Models/userModel");
 const { use } = require("../routes/userRoutes");
 var validator = require("email-validator");
 
