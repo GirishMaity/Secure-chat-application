@@ -108,7 +108,7 @@ const Signup = () => {
       localStorage.setItem("userInfo", JSON.stringify(data));
 
       setLoading(false);
-      history.pushState("/chats");
+      history.push("/chats");
     } catch (error) {
       toast({
         title: "Error Occured!!",
@@ -135,6 +135,7 @@ const Signup = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email</FormLabel>
         <Input
+          type="email"
           placeholder="Enter Your Email"
           onChange={(e) => setEmail(e.target.value)}
         />

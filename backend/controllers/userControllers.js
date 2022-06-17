@@ -2,6 +2,7 @@ const asyncHandler = require("express-async-handler");
 const generateToken = require("../config/generateToken");
 const User = require("../models/userModel");
 const { use } = require("../routes/userRoutes");
+var validator = require("email-validator");
 
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password, pic } = req.body;
@@ -9,6 +10,11 @@ const registerUser = asyncHandler(async (req, res) => {
   if (!name || !email || !password) {
     res.status(400);
     throw new Error("Please enter all the required fields");
+  }
+
+  if (!validator.validate(email)) {
+    res.status(400);
+    throw new Error("Enter valid email");
   }
 
   const userExists = await User.findOne({ email });
