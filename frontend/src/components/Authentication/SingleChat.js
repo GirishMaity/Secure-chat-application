@@ -15,7 +15,7 @@ import animationData from "../../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../../Context/ChatProvider";
-const ENDPOINT = "https://mern-secure-chat-app.herokuapp.com/";
+const ENDPOINT = "https://secure-mern-chat-app.herokuapp.com/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
