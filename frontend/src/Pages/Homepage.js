@@ -41,7 +41,7 @@ function Homepage() {
           color="white"
         >
           <img src="logo.png" alt="logo" width="60%"></img>
-          Chat-App
+          Chat-App-mern
         </Text>
       </Box>
       <Box bg="black" w="100%" p={4} borderRadius="lg" borderWidth="">
