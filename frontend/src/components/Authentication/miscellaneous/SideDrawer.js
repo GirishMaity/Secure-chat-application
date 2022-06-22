@@ -137,13 +137,18 @@ const SideDrawer = () => {
       >
         <Tooltip label="Search users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>
-            <i class="fa-solid fa-magnifying-glass" ></i>
+            <i class="fa-solid fa-magnifying-glass ; color:black"></i>
             <Text d={{ base: "none", md: "flex" }} px="4">
               Search User
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontFamily="Work sans" color="Darkgreen" fontWeight="bold">
+        <Text
+          fontSize="2xl"
+          fontFamily="Work sans"
+          color="Darkgreen"
+          fontWeight="bold"
+        >
           Chatting App
         </Text>
         <div>
