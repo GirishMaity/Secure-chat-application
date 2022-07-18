@@ -8,7 +8,7 @@ const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
 
-const app = express(); //Instance of express variable
+const app = express();
 
 app.use(express.json());
 
