@@ -41,9 +41,33 @@ Uses Socket.io for real time communication and stores user details in encrypted 
 ## Getting Started
 
 ### Prerequisites
+- Node ^10.0.0
+- npm
 
-### Installation
+### Client-side usage(PORT: 3000)
+```
+$ cd frontend   // go to client folder
+$ npm i         // npm install packages
+$ npm start     // run it locally
 
+// deployment for client app
+$ npm run build 
+```
+
+### Server-side usage(PORT: 5000)
+#### Prepare .env file
+ You need to add Port number for backend, MongoDB atlas URI and create a JWT secret
+```
+PORT = 5000
+MONGO_URI = <your mongoDB atlas URI>
+JWT_SECRET = <your secret key>
+```
+#### Start
+```
+$ npm i        // npm install packages
+$ cd backend   // go to backend folder
+$ npm start    // run it locally
+```
 
 
 
