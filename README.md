@@ -11,7 +11,8 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#client-side-usageport-3000">Client-side usage</a></li>
+        <li><a href="#server-side-usageport-5000">Server-side usage</a></li>
       </ul>
     </li>
   </ol>
