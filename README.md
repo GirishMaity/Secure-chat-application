@@ -81,6 +81,6 @@ $ npm start    // run it locally
 [Express-url]: https://expressjs.com/
 [Mongo.js]: https://img.shields.io/badge/mongo_db-000000?style=for-the-badge&logo=MongoDb&logoColor=white
 [Mongo-url]: https://www.mongodb.com/
-[product-screenshot]: https://chatsecure.org/images/chatsecure-banner.png
+[product-screenshot]: frontend/build/logo.png
 
                   
