@@ -75,7 +75,7 @@ $ npm start    // run it locally
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Node.js]: https://img.shields.io/badge/react.js-000000?style=for-the-badge&logo=reactjs&logoColor=white
+[Node.js]: https://img.shields.io/badge/node.js-000000?style=for-the-badge&logo=reactjs&logoColor=white
 [Node-url]: https://nodejs.org/en/about/
 [Express.js]: https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=expressjs&logoColor=white
 [Express-url]: https://expressjs.com/
