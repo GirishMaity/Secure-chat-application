@@ -22,7 +22,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-#### Mern Chat App
+## Chat-UP
 
 This is a Full Stack Chatting App.
 Uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.
@@ -75,12 +75,12 @@ $ npm start    // run it locally
 
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[Node.js]: https://img.shields.io/badge/react.js-000000?style=for-the-badge&logo=reactjs&logoColor=white
+[Node.js]: https://img.shields.io/badge/node.js-000000?style=for-the-badge&logo=reactjs&logoColor=white
 [Node-url]: https://nodejs.org/en/about/
 [Express.js]: https://img.shields.io/badge/express.js-000000?style=for-the-badge&logo=expressjs&logoColor=white
 [Express-url]: https://expressjs.com/
 [Mongo.js]: https://img.shields.io/badge/mongo_db-000000?style=for-the-badge&logo=MongoDb&logoColor=white
 [Mongo-url]: https://www.mongodb.com/
-[product-screenshot]: https://chatsecure.org/images/chatsecure-banner.png
+[product-screenshot]: frontend/build/logo.png
 
                   
