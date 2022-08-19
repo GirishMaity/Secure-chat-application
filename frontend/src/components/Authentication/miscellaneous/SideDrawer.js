@@ -149,7 +149,7 @@ const SideDrawer = () => {
           color="Darkgreen"
           fontWeight="bold"
         >
-          Chatting App
+          Chat-Up
         </Text>
         <div>
           <Menu>
