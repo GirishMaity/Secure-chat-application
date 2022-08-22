@@ -5,7 +5,7 @@ import { VStack } from "@chakra-ui/layout";
 import { useToast } from "@chakra-ui/react";
 import React, { useState } from "react";
 import axios from "axios";
-import { useHistory } from "react-router-dom";
+import { createBrowserHistory } from "history";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
@@ -16,7 +16,9 @@ const Signup = () => {
   const [pic, setPic] = useState();
   const [loading, setLoading] = useState(false);
   const toast = useToast();
-  const history = useHistory();
+  const history = createBrowserHistory({
+    forceRefresh: true,
+  });
 
   const handleClick = () => setShow(!show);
   const postDetails = (pics) => {
