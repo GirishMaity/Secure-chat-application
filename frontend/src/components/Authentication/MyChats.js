@@ -25,7 +25,10 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get(
+        "https://chat-up-wvhi.onrender.com/api/chat",
+        config
+      );
       setChats(data);
     } catch (error) {
       toast({
@@ -73,7 +76,7 @@ const MyChats = ({ fetchAgain }) => {
           <Button
             d="flex"
             fontSize={{ base: "17px", md: "10px", lg: "17px" }}
-              bgColor="black"
+            bgColor="black"
             rightIcon={<AddIcon />}
             color=""
           >
@@ -83,7 +86,7 @@ const MyChats = ({ fetchAgain }) => {
       </Box>
       <Box
         d="flex"
-        flexDir="column"  
+        flexDir="column"
         p={3}
         //bg="#F8F8F8" //below box
         w="100%"
