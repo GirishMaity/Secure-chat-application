@@ -7,10 +7,18 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
+const cors = require("cors");
 
 const app = express(); //Instance of express variable
 
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: "https://secure-chat-application-ebon.vercel.app",
+    allowedHeaders: ["Content-Type"],
+  })
+);
 
 dotenv.config();
 connectDB();
