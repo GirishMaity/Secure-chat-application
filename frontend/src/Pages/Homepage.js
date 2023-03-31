@@ -39,6 +39,10 @@ function Homepage() {
           fontWeight={"bold"}
           fontFamily="Work sans"
           color="white"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          flexDirection="column"
         >
           <img src="logo.png" alt="logo" width="60%"></img>
           Welcome to Chat-Up
