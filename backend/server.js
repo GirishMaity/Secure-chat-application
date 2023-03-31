@@ -16,7 +16,8 @@ app.use(express.json());
 app.use(
   cors({
     origin: "https://secure-chat-application-ebon.vercel.app",
-    allowedHeaders: ["Content-Type"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   })
 );
 
