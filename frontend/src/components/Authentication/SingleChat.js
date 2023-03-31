@@ -15,7 +15,7 @@ import animationData from "../../animations/typing.json";
 import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../../Context/ChatProvider";
-const ENDPOINT = "https://plankton-app-xbip2.ondigitalocean.app/";
+const ENDPOINT = "https://chat-up-wvhi.onrender.com/";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
